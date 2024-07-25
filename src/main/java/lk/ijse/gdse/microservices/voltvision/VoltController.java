@@ -10,6 +10,11 @@ import java.util.List;
 @CrossOrigin
 public class VoltController {
 
+    @GetMapping("/getAll")
+    public void getMethod(){
+        System.out.println("GET Method");
+    }
+
     @PostMapping("/save")
     public String saveVolt(@RequestBody List<VoltDTO> voltDTO){
         System.out.println(voltDTO.toString());
